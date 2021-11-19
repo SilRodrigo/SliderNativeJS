@@ -75,14 +75,55 @@
 
 <body>
 
-    <div class="container bg-light h-100 d-flex align-items-center">
+    <div class="container bg-light d-flex align-items-center">
         <div class="slider-container container bg-white m-5">
-            <div class="botao next btn btn-light border-dark rounded-circle d-flex align-items-center justify-content-center" onclick="navigate(true)"> <i
-                    class="fa fa-chevron-right fa-lg pt-1 ps-1" aria-hidden="true"></i></div>
-            <div class="botao prev btn btn-light border-dark rounded-circle d-flex align-items-center justify-content-center" onclick="navigate(false)"> <i
-                    class="fa fa-chevron-left fa-lg pt-1" aria-hidden="true"></i></div>
+            <div class="botao next btn btn-light border-dark rounded-circle d-flex align-items-center justify-content-center"
+                onclick="navigate(this.parentElement, true, true)"> <i class="fa fa-chevron-right fa-lg pt-1 ps-1"
+                    aria-hidden="true"></i>
+            </div>
+            <div class="botao prev btn btn-light border-dark rounded-circle d-flex align-items-center justify-content-center"
+                onclick="navigate(this.parentElement, false, true)"> <i class="fa fa-chevron-left fa-lg pt-1"
+                    aria-hidden="true"></i>
+            </div>
+            <div class="slider justify-content-center d-flex py-4">
+                <div class="px-3">
+                    <div class="card col-6 col-md-4 col-lg-3" style="width: 18rem;">
+                        <div class="bg-primary" style="height: 10rem;"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="slider d-flex py-4">
+                <div class="px-3">
+                    <div class="card col-6 col-md-4 col-lg-3" style="width: 18rem;">
+                        <div class="bg-primary" style="height: 10rem;"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="px-3">
+                    <div class="card col-6 col-md-4 col-lg-3" style="width: 18rem;">
+                        <div class="bg-primary" style="height: 10rem;"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="px-3">
                     <div class="card col-6 col-md-4 col-lg-3" style="width: 18rem;">
@@ -166,13 +207,129 @@
         </div>
     </div>
 
+    <div class="container bg-light d-flex align-items-center">
+        <div class="slider-container container bg-white m-5">
+            <div class="botao next btn btn-light border-dark rounded-circle d-flex align-items-center justify-content-center"
+                onclick="navigate(this.parentElement, true, true)"> <i class="fa fa-chevron-right fa-lg pt-1 ps-1"
+                    aria-hidden="true"></i>
+            </div>
+            <div class="botao prev btn btn-light border-dark rounded-circle d-flex align-items-center justify-content-center"
+                onclick="navigate(this.parentElement, false, true)"> <i class="fa fa-chevron-left fa-lg pt-1"
+                    aria-hidden="true"></i>
+            </div>
+            <div class="slider d-flex justify-content-center py-4">
+                <div class="px-3">
+                    <div class="card col-6 col-md-4 col-lg-3" style="width: 18rem;">
+                        <div class="bg-primary" style="height: 10rem;"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="px-3">
+                    <div class="card col-6 col-md-4 col-lg-3" style="width: 18rem;">
+                        <div class="bg-primary" style="height: 10rem;"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container bg-light d-flex align-items-center">
+        <div class="slider-container container bg-white m-5">
+            <div class="botao next btn btn-light border-dark rounded-circle d-flex align-items-center justify-content-center"
+                onclick="navigate(this.parentElement, true, true)"> <i class="fa fa-chevron-right fa-lg pt-1 ps-1"
+                    aria-hidden="true"></i>
+            </div>
+            <div class="botao prev btn btn-light border-dark rounded-circle d-flex align-items-center justify-content-center"
+                onclick="navigate(this.parentElement, false, true)"> <i class="fa fa-chevron-left fa-lg pt-1"
+                    aria-hidden="true"></i>
+            </div>
+            <div class="slider d-flex justify-content-center py-4">
+                <div class="px-3">
+                    <div class="card col-6 col-md-4 col-lg-3" style="width: 18rem;">
+                        <div class="bg-primary" style="height: 10rem;"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="px-3">
+                    <div class="card col-6 col-md-4 col-lg-3" style="width: 18rem;">
+                        <div class="bg-primary" style="height: 10rem;"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="px-3">
+                    <div class="card col-6 col-md-4 col-lg-3" style="width: 18rem;">
+                        <div class="bg-primary" style="height: 10rem;"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="px-3">
+                    <div class="card col-6 col-md-4 col-lg-3" style="width: 18rem;">
+                        <div class="bg-primary" style="height: 10rem;"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
-        function navigate(forward) {
-            let slider = document.body.querySelector('.slider');
+
+        document.body.querySelectorAll('.slider').forEach(slider => {
             if (slider.scrollWidth <= slider.clientWidth) return;
-            leftSpacing = document.body.querySelectorAll('.slider > div')[2].offsetLeft;
-            let direction = slider.scrollLeft + (leftSpacing * .50) * (forward ? 1 : -1);
-            document.body.querySelector('.slider').scroll(direction, 0);
+            slider.classList.remove('justify-content-center');
+        })
+
+        function navigate(context, forward, loopable) {
+            let slider = context.querySelector('.slider');
+            if (slider.scrollWidth <= slider.clientWidth) return;
+            let leftSpacing = context.querySelectorAll('.slider > div')[1].offsetLeft;
+            let direction = slider.scrollLeft + ((leftSpacing) * (forward ? 1 : -1));
+            if (loopable) {
+                if (slider.scrollLeft + slider.offsetWidth === slider.scrollWidth && direction > slider.scrollLeft) return context.querySelector('.slider').scroll(0, 0);
+                if ((leftSpacing * -1) === direction) return context.querySelector('.slider').scroll(slider.scrollWidth, 0);
+            }
+            return context.querySelector('.slider').scroll(direction, 0);
         }
     </script>
 </body>
