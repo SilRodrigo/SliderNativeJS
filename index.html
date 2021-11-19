@@ -250,11 +250,11 @@
     <div class="container bg-light d-flex align-items-center">
         <div class="slider-container container bg-white m-5">
             <div class="botao next btn btn-light border-dark rounded-circle d-flex align-items-center justify-content-center"
-                onclick="navigate(this.parentElement, true, true)"> <i class="fa fa-chevron-right fa-lg pt-1 ps-1"
+                onclick="navigate(this.parentElement, true, false)"> <i class="fa fa-chevron-right fa-lg pt-1 ps-1"
                     aria-hidden="true"></i>
             </div>
             <div class="botao prev btn btn-light border-dark rounded-circle d-flex align-items-center justify-content-center"
-                onclick="navigate(this.parentElement, false, true)"> <i class="fa fa-chevron-left fa-lg pt-1"
+                onclick="navigate(this.parentElement, false, false)"> <i class="fa fa-chevron-left fa-lg pt-1"
                     aria-hidden="true"></i>
             </div>
             <div class="slider d-flex justify-content-center py-4">
@@ -314,22 +314,23 @@
     </div>
 
     <script>
+        const sliderClassName = '.slider';
 
-        document.body.querySelectorAll('.slider').forEach(slider => {
+        document.body.querySelectorAll(sliderClassName).forEach(slider => {
             if (slider.scrollWidth <= slider.clientWidth) return;
             slider.classList.remove('justify-content-center');
         })
 
         function navigate(context, forward, loopable) {
-            let slider = context.querySelector('.slider');
+            let slider = context.querySelector(sliderClassName);
             if (slider.scrollWidth <= slider.clientWidth) return;
             let leftSpacing = context.querySelectorAll('.slider > div')[1].offsetLeft;
             let direction = slider.scrollLeft + ((leftSpacing) * (forward ? 1 : -1));
             if (loopable) {
-                if (slider.scrollLeft + slider.offsetWidth === slider.scrollWidth && direction > slider.scrollLeft) return context.querySelector('.slider').scroll(0, 0);
-                if ((leftSpacing * -1) === direction) return context.querySelector('.slider').scroll(slider.scrollWidth, 0);
+                if (slider.scrollLeft + slider.offsetWidth === slider.scrollWidth && direction > slider.scrollLeft) return context.querySelector(sliderClassName).scroll(0, 0);
+                if (((leftSpacing) * -1) === direction) return context.querySelector(sliderClassName).scroll(slider.scrollWidth, 0);
             }
-            return context.querySelector('.slider').scroll(direction, 0);
+            return context.querySelector(sliderClassName).scroll(direction, 0);
         }
     </script>
 </body>
