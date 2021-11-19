@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<head>
+    <style>
+        body {
+            height: 100vh;
+        }
+
+        .d-flex-teste {
+            display: flex;
+        }
+
+        .row-teste {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .slider {
+            overflow-x: auto;
+            max-width: 100%;
+            scroll-behavior: smooth;
+        }
+
+        .botao {
+            top: 50%;
+            z-index: 50;
+            height: 50px;
+            width: 50px;
+            position: absolute;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .slider-container {
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+            height: 9px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border: 4px solid transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgb(84, 169, 202);
+            border: 3px solid #f1f1f1;
+            border-radius: 25px;
+
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgb(24, 112, 141);
+            height: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container bg-light h-100 d-flex align-items-center">
+        <div class="slider-container container bg-white m-5">
+            <div class="botao next btn btn-primary border rounded-circle" onclick="navigate(true)"> </div>
+            <div class="botao prev btn btn-primary border rounded-circle" onclick="navigate(false)"> </div>
+
+            <div class="slider d-flex py-4">
+
+                <div class="px-3">
+                    <div class="card col-6 col-md-4 col-lg-3" style="width: 18rem;">
+                        <div class="bg-primary" style="height: 10rem;"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="px-3">
+                    <div class="card col-6 col-md-4 col-lg-3" style="width: 18rem;">
+                        <div class="bg-primary" style="height: 10rem;"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="px-3">
+                    <div class="card col-6 col-md-4 col-lg-3" style="width: 18rem;">
+                        <div class="bg-primary" style="height: 10rem;"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="px-3">
+                    <div class="card col-6 col-md-4 col-lg-3" style="width: 18rem;">
+                        <div class="bg-primary" style="height: 10rem;"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="px-3">
+                    <div class="card col-6 col-md-4 col-lg-3" style="width: 18rem;">
+                        <div class="bg-primary" style="height: 10rem;"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="px-3">
+                    <div class="card col-6 col-md-4 col-lg-3" style="width: 18rem;">
+                        <div class="bg-primary" style="height: 10rem;"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="https://releases.jquery.com/git/jquery-git.slim.js"></script>
+
+    <script>
+        function navigate(forward) {
+            let slider = document.body.querySelector('.slider');
+            if (slider.scrollWidth <= slider.clientWidth) return;
+            leftSpacing = document.body.querySelectorAll('.slider > div')[2].offsetLeft;
+            let direction = slider.scrollLeft + (leftSpacing * .50) * (forward ? 1 : -1);
+            document.body.querySelector('.slider').scroll(direction, 0);
+        }
+    </script>
+</body>
+
+</html>
