@@ -324,7 +324,7 @@
         function navigate(context, forward, loopable) {
             let slider = context.querySelector(sliderClassName);
             if (slider.scrollWidth <= slider.clientWidth) return;
-            let leftSpacing = context.querySelectorAll('.slider > div')[1].offsetLeft;
+            let leftSpacing = context.querySelectorAll('.slider > div')[1].clientWidth;
             let direction = slider.scrollLeft + ((leftSpacing) * (forward ? 1 : -1));
             if (loopable) {
                 if (slider.scrollLeft + slider.offsetWidth === slider.scrollWidth && direction > slider.scrollLeft) return context.querySelector(sliderClassName).scroll(0, 0);
